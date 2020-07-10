@@ -8,17 +8,20 @@ public class RemoveElement {
 
 	public static void main(String[] args) {
 		int arr[] = {1, 1, 2, 3, 3};
-		System.out.println("length:" + removeElement(arr, arr.length, 1));
+		int length = removeElement(arr, 1);
+		for (int i=0; i<length && i<arr.length; i++) {
+			System.out.println("arr[" + i + "]:" + arr[i]);
+		}
 	}
 	
-	private static int removeElement(int A[], int n, int elem) {
+	private static int removeElement(int arr[], int elem) {
 		int j = 0;
-		for (int i=0; i<n; i++) {
-			if (A[i] == elem) {
+		for (int i=0; i<arr.length; i++) {
+			if (arr[i] == elem) {
 				continue;
 			}
 			
-			A[j] = A[i];
+			arr[j] = arr[i];
 			j++;
 		}
 		
