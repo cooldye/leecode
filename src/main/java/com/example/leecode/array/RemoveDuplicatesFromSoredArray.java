@@ -9,7 +9,7 @@ package com.example.leecode.array;
 public class RemoveDuplicatesFromSoredArray {
 
 	public static void main(String[] args) {
-		int arr[] = {1, 1, 2};
+		int arr[] = {1, 1, 1, 1, 2, 2, 2, 3, 3};
 		int length = removeDuplicates(arr);
 		for (int i=0; i<length && i<arr.length; i++) {
 			System.out.println("arr[" + i + "]:" + arr[i]);
@@ -22,7 +22,7 @@ public class RemoveDuplicatesFromSoredArray {
 		}
 		
 		int j=0;
-		for (int i=1; i < arr.length; i++) {
+       		for (int i=1; i < arr.length; i++) {
 			if (arr[j] != arr[i]) {
 				arr[++j] = arr[i];
 			}
